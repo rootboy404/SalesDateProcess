@@ -23,6 +23,9 @@ repositories {
 }
 
 dependencies {
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-logging', version: '2.2.6.RELEASE'
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+	compile group: 'commons-io', name: 'commons-io', version: '2.6'
 	implementation 'org.springframework.boot:spring-boot-starter'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'

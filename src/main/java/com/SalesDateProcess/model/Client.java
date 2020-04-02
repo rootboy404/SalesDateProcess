@@ -10,9 +10,7 @@ import lombok.*;
 public class Client {
 
     private String cnpj;
-
     private String name;
-
     private String businessArea;
 
 

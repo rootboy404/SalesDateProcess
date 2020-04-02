@@ -12,8 +12,6 @@ import java.math.BigDecimal;
 public class Salesman {
 
     private String cpf;
-
     private String name;
-
     private BigDecimal salary;
 }
