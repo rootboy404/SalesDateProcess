@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @Service
-public class SalesmanService{
+public class SalesmanService {
 
     private List<Salesman> salesmanList;
 
@@ -16,16 +16,16 @@ public class SalesmanService{
         this.salesmanList = listSalesman;
     }
 
-    public void addSalesman( String[] valueSalesman) {
-            if (valueSalesmanIsValid(valueSalesman)) {
-                salesmanList.add(Salesman.builder().cpf(valueSalesman[1])
+    public void addSalesman(String[] valueSalesman) {
+        if (valueSalesmanIsValid(valueSalesman)) {
+            salesmanList.add(Salesman.builder().cpf(valueSalesman[1])
                     .name(valueSalesman[2]).salary(BigDecimal.valueOf(Double.parseDouble(valueSalesman[3]))).build());
         }
     }
 
     private Boolean valueSalesmanIsValid(String[] valueSalesman) {
         if (valueSalesman.length == 4) {
-           return salaryIsNumeric(valueSalesman[3]);
+            return salaryIsNumeric(valueSalesman[3]);
         }
         return Boolean.FALSE;
     }

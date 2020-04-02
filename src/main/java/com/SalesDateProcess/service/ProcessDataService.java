@@ -28,7 +28,9 @@ public class ProcessDataService {
         if (!data.isEmpty()) {
             data.stream().forEach(this::parseDate);
             ResumeDataService resumeDataService = new ResumeDataService();
-            resumeDataService.createResumeFile(nameFileData.replaceAll(".dat",""),clientService.getQuantityClient(),salesmanService.getQuantitySalesman(),saleService.getIdMoreExpensiveSale(),saleService.getWorstSeller());
+            resumeDataService.createResumeFile(nameFileData.replaceAll(".dat",""),
+                    clientService.getQuantityClient(),salesmanService.getQuantitySalesman(),saleService.getIdMoreExpensiveSale(),
+                    saleService.getWorstSeller());
         }
     }
 

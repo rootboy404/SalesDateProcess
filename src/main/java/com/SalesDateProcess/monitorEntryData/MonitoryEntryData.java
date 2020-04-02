@@ -19,7 +19,7 @@ public class MonitoryEntryData {
     public static void startMonitoryEntryData() throws IOException {
         Path path = ReadFile.readPath(System.getProperty(USER_HOME).concat(PATH_DATA_IN));
 
-        WatchKey register = path.register(getWatchService(), StandardWatchEventKinds.ENTRY_CREATE,StandardWatchEventKinds.ENTRY_MODIFY);
+        WatchKey register = path.register(getWatchService(), StandardWatchEventKinds.ENTRY_CREATE, StandardWatchEventKinds.ENTRY_MODIFY);
 
         readExistingDataInTheDirectory(path);
         monitoryDataInTheDirectory(path, register);
@@ -30,20 +30,23 @@ public class MonitoryEntryData {
 
             for (WatchEvent<?> event : register.pollEvents()) {
                 Path dataPath = path.resolve((Path) event.context());
-               readDataInDirectory(dataPath);
+                readDataInDirectory(dataPath);
             }
         }
     }
 
     private static void readExistingDataInTheDirectory(Path path) throws IOException {
-        Files.walk(path).filter(Files::isRegularFile).forEach(dataPath -> {readDataInDirectory(dataPath);});
+        Files.walk(path).filter(Files::isRegularFile).forEach(MonitoryEntryData::readDataInDirectory);
     }
 
-    private static void  readDataInDirectory(Path data){
-        if (data.getFileName().toString().endsWith(".dat")){
+    private static void readDataInDirectory(Path data) {
+        if (data.getFileName().toString().endsWith(".dat")) {
             try {
-                ProcessDataService processDataService = new ProcessDataService(new SalesmanService(new ArrayList<>()),new ClientService(new ArrayList<>()),new SaleService(new ArrayList<>(),new ItemService()));
-                processDataService.processData(ReadFile.readData(data),data.getFileName().toString());
+                ProcessDataService processDataService = new ProcessDataService(new SalesmanService(new ArrayList<>()),
+                        new ClientService(new ArrayList<>()), new SaleService(new ArrayList<>(), new ItemService()));
+
+                processDataService.processData(ReadFile.readData(data), data.getFileName().toString());
+
             } catch (IOException e) {
                 e.printStackTrace();
             }

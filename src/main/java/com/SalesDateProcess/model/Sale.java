@@ -1,6 +1,10 @@
 package com.SalesDateProcess.model;
 
-import lombok.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.AllArgsConstructor;
 
 import java.math.BigDecimal;
 import java.util.List;

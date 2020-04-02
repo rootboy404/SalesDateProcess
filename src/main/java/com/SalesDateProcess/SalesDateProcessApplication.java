@@ -9,12 +9,12 @@ import java.io.IOException;
 @SpringBootApplication
 public class SalesDateProcessApplication {
 
-	public static void main(String[] args)  {
-		SpringApplication.run(SalesDateProcessApplication.class, args);
-		try {
-			MonitoryEntryData.startMonitoryEntryData();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SalesDateProcessApplication.class, args);
+        try {
+            MonitoryEntryData.startMonitoryEntryData();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

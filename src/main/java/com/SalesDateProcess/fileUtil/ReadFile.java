@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class ReadFile {
 
-    public static Path readPath(String path){
+    public static Path readPath(String path) {
         return Paths.get(path);
     }
 
