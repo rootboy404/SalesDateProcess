@@ -7,7 +7,7 @@ import java.io.IOException;
 public class ResumeDataService {
 
 
-    public static final String TITLE_TEXT_TEMPLATE = "Analysis of file data analysis ";
+    public static final String TITLE_TEXT_TEMPLATE = "Analysis of file data ";
     public static final String CLIENT_TEXT_TEMPLATE = "Client quantity: ";
     public static final String SALESMAN_TEXT_TEMPLATE = "Salesman quantity: ";
     public static final String MORE_EXPANSIVE_SALES_TEXT_TEMPLATE = "More Expansive Sales: ";
