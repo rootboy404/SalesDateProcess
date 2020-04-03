@@ -29,7 +29,7 @@ Para o projeto rodar é necessário alguns cuidados importantes.
 - Criar no diretório de usuário as seguintes pastas ``` /data/in ```. Pois é onde ficara o aquivo de entrada.
 - Criar no diretório de usuário as seguintes pastas ``` /data/out ```. Pois é onde ficara o aquivo de saída.
 - Em distribuições Linux os arquivos de saída no diretório ``` /data/out ``` podem ficar ocultos, a solução para 
-Distribuições baseadas em Ubuntu é executar o atalho *ctrl+h* para poder visualizar os arquivos.
+Distribuições baseadas em Ubuntu deve executar o atalho *ctrl+h* para poder visualizar os arquivos.
 - Em Sistemas Windows muito cuidado ao criar arquivos com bloco de notas porque o mesmo sempre fica com o formato **texto**
 e não **dat** para execução em Windows esta disponível projeto  arquivo  ``` testeData.dat ```.
 
