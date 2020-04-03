@@ -2,7 +2,6 @@ package com.SalesDateProcess.service;
 
 import com.SalesDateProcess.model.Item;
 import com.SalesDateProcess.model.Sale;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
