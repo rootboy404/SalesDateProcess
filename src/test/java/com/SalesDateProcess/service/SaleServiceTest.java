@@ -40,6 +40,7 @@ public class SaleServiceTest {
         //WHEN
         assertThat(saleService.getIdMoreExpensiveSale()).isEqualTo("10");
     }
+
     private List<String[]> getSalesList() {
         return Arrays.asList(new String[]{"003", "10", "[1-10-100,2-30-1,3-40-1]", "Pedro"},
                 new String[]{"003", "11", "[1-10-100]", "João"},

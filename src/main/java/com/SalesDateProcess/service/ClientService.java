@@ -14,14 +14,14 @@ public class ClientService {
         this.clientList = clientList;
     }
 
-    public void addClient( String[] valueClient){
-        if(valueClientIsValid(valueClient)){
+    public void addClient(String[] valueClient) {
+        if (valueClientIsValid(valueClient)) {
             clientList.add(Client.builder().cnpj(valueClient[1]).name(valueClient[2]).businessArea(valueClient[3]).build());
         }
     }
 
     private Boolean valueClientIsValid(String[] valueClient) {
-        if(valueClient.length == 4){
+        if (valueClient.length == 4) {
             return Boolean.TRUE;
         }
         return Boolean.FALSE;

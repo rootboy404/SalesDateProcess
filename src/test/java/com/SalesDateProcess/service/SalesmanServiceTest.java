@@ -18,11 +18,11 @@ public class SalesmanServiceTest {
 
     @Test
     public void givenThatListOfSalesmanWhenProcessThisDataWhenReturnTotalSalesman() throws Exception {
-            //GIVEN
-        List<String[]> salesman = Arrays.asList(new String[]{"001","1234567891234","Carlos","800"},
-                new String[]{"001","1234567891234","Pedro","4000.40"},
-                new String[]{"001","1234567891234","Pedro","1000"}
-              );
+        //GIVEN
+        List<String[]> salesman = Arrays.asList(new String[]{"001", "1234567891234", "Carlos", "800"},
+                new String[]{"001", "1234567891234", "Pedro", "4000.40"},
+                new String[]{"001", "1234567891234", "Pedro", "1000"}
+        );
         //WHEN
         salesman.stream().forEach(salesmanService::addSalesman);
         //WHEN

@@ -28,8 +28,8 @@ public class ProcessDataServiceTest {
                 "003ç10ç[1-10-100,2-30-2.50]çAndre",
                 "003ç08ç[1-34-10,2-33-1]çDaniel");
         //WHEN
-        ProcessDataService processDataService = new ProcessDataService(new SalesmanService(new ArrayList<>()),new ClientService(new ArrayList<>()),
-                new SaleService(new ArrayList<>(),new ItemService()));
+        ProcessDataService processDataService = new ProcessDataService(new SalesmanService(new ArrayList<>()), new ClientService(new ArrayList<>()),
+                new SaleService(new ArrayList<>(), new ItemService()));
         processDataService.processData(data, "teste.dat");
 
         Path path = Paths.get(System.getProperty("user.home").concat("/data/out/").concat("teste.done.dat"));
